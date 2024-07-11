@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traction: Marketing Agency</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+
+        body {
+            min-height: 100vh;
+            background: #161a2d;
+             font-family: "Wittgenstein", serif;
+            background-image:url(https://i.pinimg.com/originals/98/51/a8/9851a8af7f34eb4413cc2165be044489.gif);
+            background-size: cover;
+            background-position: center top;  
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100px;
+            background: #d2d2d2;
+            padding: 25px 20px;
+            transition: all 0.4s ease;
+            display: flex;
+            overflow-x: hidden;
+            flex-direction: column;
+        }
+
+        .sidebar-header img {
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        .sidebar:hover {
+            width: 260px;
+        }
+
+        .sidebar-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            margin-left: 30px;
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar-links li a {
+            color: blue;
+            display: flex;
+            gap: 0 20px;
+            font-weight: 500;
+            white-space: nowrap;
+            align-items: center;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+
+        .sidebar-links {
+            list-style-type: none;
+            margin-top: 20px;
+            height: 80%;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+
+        .sidebar-links li a:hover {
+            color: black;
+            background: #d2d2d2;
+            border-radius: 4px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            margin: 100px 50px;
+            color: white;
+        }
+
+        #start {
+             font-family: "Yatra One", system-ui;
+            font-size: 60px;
+            max-width: 400px;
+            animation: fadeIn 2s ease-in-out;
+            margin: 20px 0 0 300px;
+            font-weight: 1200px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #content {
+            margin-left: 20px;
+            font-size: 16px;
+            font-weight: 300;
+            font-family: "Roboto Slab", serif;
+            margin: 20px 0 0 300px;
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #04AA6D;
+            border: none;
+            border-radius: 15px;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        button:active {
+            background-color: #3e8e41;
+        }
+
+        .image-column img {
+            max-width: 100%;
+            height:auto;
+            margin-left: 20px;
+            animation: floatImage 10s ease-in-out infinite;
+        }
+
+        @keyframes floatImage {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-1.4rem);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .social {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            font-size: 25px;
+            color: white;
+            transition: opacity 0.3s ease;
+        }
+
+        .social.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .social a {
+            color: white;
+            padding: 1rem;
+            border-radius: 100%;
+        }
+
+        .social a:hover {
+            transition: 0.2s ease;
+            cursor: pointer;
+            font-size: 26px;
+            box-shadow: 0 0 1rem #d2d2d2;
+        }
+
+        footer {
+            position: fixed;
+            bottom: -50px; /* Initially hide the footer */
+            width: 100%;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            font-family: "Open Sans", sans-serif;
+            transition: bottom 0.2s ease; /* Smooth transition */
+        }
+
+        footer.visible {
+            bottom: 0; /* Show the footer when visible class is added */
+        }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="logo1-modified.png" alt="logo">
+            <h2>TRACTION.</h2>
+        </div>
+
+        <ul class="sidebar-links">
+            <li><a href="#"><span class="material-symbols-outlined">home</span>Home</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">design_services</span>Services</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">info</span>About</a></li>
+            <li><a href="#"><span class="material-symbols-outlined">phone_in_talk</span>Contact</a></li>
+            <br><br><br><br><br><br>
+            <li><a href="#"><span class="material-symbols-outlined">login</span>SignUp for <br>newsletter</a></li>
+        </ul>
+    </aside>
+
+    <header class="social" id="icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </header>
+    <div class="container">
+        <div>
+            <p id="start">Welcome to <span style="color:yellow; text-shadow:0 0 1rem white">TRACTION.</span></p>
+            <p id="content">
+                Unlock Your Brand’s Potential with Cutting-Edge Digital Marketing & Stunning Content Creation
+                Transform your online presence and captivate your audience with our expert digital marketing strategies and creative content solutions. Let's make your brand stand out.
+                <br><br><br>
+                <button title="click to get started with Traction. One of the best Marketing Agency">Get Started</button>
+            </p>
+        </div>
+        <div class="image-column">
+            <img src="digi.png" alt="image" id="image">      </div>
+    </div>
+    <br><br><br><br><br><br>
+    <footer>
+        &copy; 2024 TRACTION. All Rights Reserved. | Contact us: <a href="mailto:your-email@gmail.com" style="color: #04AA6D;">traction@gmail.com</a>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            var socialMediaIcons = document.getElementById('icons');
+            if (window.scrollY > 100) { // Adjust this value based on when you want the icons to hide
+                socialMediaIcons.classList.add('hidden');
+            } else {
+                socialMediaIcons.classList.remove('hidden');
+            }
+        });
+
+        window.addEventListener('scroll', function() {
+            var footer = document.querySelector('footer');
+            if (window.scrollY > 100) { // Adjust this value based on when you want the footer to appear
+                footer.classList.add('visible');
+            } else {
+                footer.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>
